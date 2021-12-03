@@ -1,0 +1,28 @@
+{
+    "name": "weather-cli",
+    "version": "1.0.0",
+    "description": "cli for getting weather",
+    "main": "index.js",
+    "bin": "./index.js",
+    "engines": {
+        "node": ">=14"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "cli",
+        "weather"
+    ],
+    "author": "Maxim Banenkov",
+    "license": "ISC",
+    "homepage": "https://github.com/bndroll",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bndroll"
+    },
+    "bugs": {
+        "email": "bounderoll.23@gmail.com"
+    }
+}
