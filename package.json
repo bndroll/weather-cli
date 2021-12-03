@@ -24,5 +24,8 @@
     },
     "bugs": {
         "email": "bounderoll.23@gmail.com"
+    },
+    "dependencies": {
+        "axios": "^0.24.0"
     }
 }
