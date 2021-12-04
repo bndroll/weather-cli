@@ -2,13 +2,16 @@
     "name": "weather-cli",
     "version": "1.0.0",
     "description": "cli for getting weather",
-    "main": "index.js",
-    "bin": "./index.js",
+    "main": "weather.js",
+    "bin": {
+        "weather": "weather.js"
+    },
     "engines": {
         "node": ">=14"
     },
+    "type": "module",
     "scripts": {
-        "start": "node index.js",
+        "start": "node weather.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
