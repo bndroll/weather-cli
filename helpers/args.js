@@ -1,3 +1,7 @@
+/**
+ * Receives command line arguments, and stores the found keys into an object
+ * {h: true, s: true ...}
+ * */
 export const getArgs = args => {
     const res = {}
     const [executer, file, ...rest] = args
