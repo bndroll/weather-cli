@@ -8,9 +8,12 @@ import axios from 'axios'
 export const getWeather = async city => {
     const token = process.env.TOKEN ?? await getKeyValue(TOKEN_DICTIONARY.token)
 
-    if (!token) throw new Error(`token isn't set, set it with the command -t [API_KEY]`)
+    if (!token) throw new Error(`
+    token isn't set
+    set token with command -t [API_KEY]
+    `)
 
-    const data = await axios.get(`https://api.openweathermap.org/data/2.5/weather`, {
+    const {data} = await axios.get(`https://api.openweathermap.org/data/2.5/weather`, {
         params: {
             q: city,
             appid: token,
@@ -19,5 +22,5 @@ export const getWeather = async city => {
         }
     })
 
-    return data.data
+    return data
 }

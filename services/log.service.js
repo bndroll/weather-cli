@@ -1,6 +1,7 @@
 import chalk from 'chalk'
 import dedent from 'dedent-js'
 
+
 /**
  * Print an error message to the console
  * */
@@ -26,6 +27,21 @@ export const printHelp = () => {
         -s [CITY] set city
         -t [API_KEY] set token
         -h log help
+        `
+    )
+}
+
+/**
+ * Print weather forecast
+ * */
+export const printWeather = (res, icon) => {
+    console.log(dedent
+        `
+        ${chalk.bgYellow(' WEATHER ')} weather in city ${res.name}
+        ${icon} ${res.weather[0].description}
+        temperature: ${res.main.temp} (feels like ${res.main.feels_like})
+        clouds: ${res.clouds.all}% humidity: ${res.main.humidity}%
+        wind speed: ${res.wind.speed}
         `
     )
 }
