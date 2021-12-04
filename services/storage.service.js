@@ -2,11 +2,17 @@ import { homedir } from 'os'
 import { join } from 'path'
 import { promises } from 'fs'
 
+
 /**
  * Saves the path to the weather-data.json file
  * If the given path doesn't exist, creates weather-data.json file in the home directory and saves the path to it
  * */
 const filePath = join(homedir(), 'weather-data.json')
+
+export const TOKEN_DICTIONARY = {
+    token: 'token',
+    city: 'city'
+}
 
 /**
  * Saves the key in the file
